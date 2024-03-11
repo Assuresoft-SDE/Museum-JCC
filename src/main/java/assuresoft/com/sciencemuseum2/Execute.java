@@ -11,25 +11,16 @@ import java.util.List;
 
 public class Execute {
     public static void main(String[] args) {
-        /*
-        AnimalData cougarData = new AnimalData("Puma concolor", "Cougar", "Mammal", "Male");
-        Cougar cougar = new Cougar(cougarData);
-
-
-
-         */
         List<Sensors> sensors = new ArrayList(List.of(Sensors.Echolocation, Sensors.Vision, Sensors.Smell));
         AnimalData cougarData = new AnimalData("Pumar concolor", "Cougar","Felidae", "Male");
         AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(),sensors, new CarnivorousDigestion());
         Animal cougar = new Cougar(cougarSystems, cougarData);
-        sensors.forEach(Sensors::recognize);
+
         cougar.sleep();
         cougar.translation();
         cougar.eat();
         cougar.breathe();
         cougar.reproduce();
+        cougar.checkEnvironment();
     }
-
-
-
 }

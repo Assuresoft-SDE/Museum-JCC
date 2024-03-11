@@ -36,13 +36,11 @@ public class AnimalSystems {
         respiratorySystem.co2Elimination();
     }
 
+    public void checkEnvironment(){
+        sensorsList.forEach(Sensors::recognize);
+    }
+
     public void executeReproductionProcess() {
         reproductiveSystem.reproduce();
     }
-/*
-    public void executeSensors() {
-        sensorialSystem.recognize();
-
-    }
- */
 }

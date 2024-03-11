@@ -40,5 +40,8 @@ public abstract class Animal {
     }
 
     public void checkEnvironment() {
+        System.out.println("Checking environment with the following sensors:");
+        animalSystems.checkEnvironment();
+        System.out.println("Finished checking environment.\n");
     }
 }

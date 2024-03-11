@@ -12,6 +12,6 @@ public enum Sensors implements SensorialSystem {
 
     @Override
     public void recognize() {
-        System.out.println("\tSensor: " + this.name());
+        System.out.println("Sensor: " + this.name());
     }
 }
