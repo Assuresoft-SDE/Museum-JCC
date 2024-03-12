@@ -12,5 +12,8 @@ public class Execute {
         cougar.breathe();
         cougar.reproduce();
         cougar.checkEnvironment();
+
+        // cougar.getInformation  (AnimalData)
+        // cougar.getBehaviours()
     }
 }

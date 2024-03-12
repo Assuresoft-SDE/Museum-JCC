@@ -5,7 +5,7 @@
  */
 package assuresoft.com.sciencemuseum2.interfaces;
 
-public interface DigestiveSystem {
+public interface DigestiveSystem extends printMessage{
     void intake();
     void mechanicalDigestion();
     void chemicalDigestion();

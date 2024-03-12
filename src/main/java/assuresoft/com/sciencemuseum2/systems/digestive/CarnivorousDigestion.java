@@ -6,7 +6,7 @@ public class CarnivorousDigestion implements DigestiveSystem {
 
     @Override
     public void intake() {
-        System.out.println("intake(): Consuming meat or animal products.");
+        printcito("intake(): Consuming meat or animal products." );
     }
 
     @Override
