@@ -5,14 +5,26 @@ import assuresoft.com.sciencemuseum2.interfaces.ReproductiveSystem;
 import assuresoft.com.sciencemuseum2.interfaces.RespiratorySystem;
 
 public abstract class Animal {
-    private final AnimalSystems animalSystems;
-    private final AnimalData animalData;
+    private AnimalSystems animalSystems;
+    private AnimalData animalData;
+
+    public Animal() {
+    }
+
 
     public Animal(AnimalSystems animalSystems, AnimalData animalData) {
         this.animalSystems = animalSystems;
         this.animalData = animalData;
     }
 
+
+    public void setAnimalSystems(AnimalSystems animalSystems){
+        this.animalSystems = animalSystems;
+    }
+
+    public  void setAnimalData(AnimalData animalData){
+        this.animalData = animalData;
+    }
 
     public void translation() {
         System.out.println(this.animalData.getCommonName() + " is moving...");
