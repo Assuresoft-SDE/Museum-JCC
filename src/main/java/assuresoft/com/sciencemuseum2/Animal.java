@@ -13,6 +13,7 @@ public abstract class Animal {
         this.animalData = animalData;
     }
 
+
     public void translation() {
         System.out.println(this.animalData.getCommonName() + " is moving...");
     }

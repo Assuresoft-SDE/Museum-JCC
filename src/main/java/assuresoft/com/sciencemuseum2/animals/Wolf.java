@@ -13,6 +13,7 @@ public class Wolf extends Animal {
         super(animalSystems, animalData);
     }
 
+
     public void formWolfPack() {
 
     }

@@ -3,6 +3,7 @@ package assuresoft.com.sciencemuseum2.systems.digestive;
 import assuresoft.com.sciencemuseum2.interfaces.DigestiveSystem;
 
 public class CarnivorousDigestion implements DigestiveSystem {
+
     @Override
     public void intake() {
         System.out.println("intake(): Consuming meat or animal products.");
