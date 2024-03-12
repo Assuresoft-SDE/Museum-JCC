@@ -20,11 +20,11 @@ public class Dolphin extends Animal {
     public Dolphin(String scientificName, String commonName, String gender) {
         super();
 
-        AnimalData cougarData = new AnimalData(scientificName, commonName, "Delphinidae", gender);
+        AnimalData dolphinData = new AnimalData(scientificName, commonName, "Delphinidae", gender);
         List<Sensors> dolphinSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Touch, Sensors.Echolocation, Sensors.Taste);
-        AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), dolphinSensors, new CarnivorousDigestion());
+        AnimalSystems dolphinSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), dolphinSensors, new CarnivorousDigestion());
 
-        super.setAnimalData(cougarData);
-        super.setAnimalSystems(cougarSystems);
+        super.setAnimalData(dolphinData);
+        super.setAnimalSystems(dolphinSystems);
     }
 }

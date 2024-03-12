@@ -23,11 +23,11 @@ public class Jellyfish extends Animal {
     public Jellyfish(String scientificName, String commonName, String gender) {
         super();
 
-        AnimalData cougarData = new AnimalData(scientificName, commonName, "Cnidaria", gender);
+        AnimalData jellyfishData = new AnimalData(scientificName, commonName, "Cnidaria", gender);
         List<Sensors> jellyfishSensors = List.of(Sensors.Cell);
-        AnimalSystems cougarSystems = new AnimalSystems(new IntegumentaryRespiration(), new SexualReproduction(), jellyfishSensors, new CarnivorousDigestion());
+        AnimalSystems jellyfishSystems = new AnimalSystems(new IntegumentaryRespiration(), new SexualReproduction(), jellyfishSensors, new CarnivorousDigestion());
 
-        super.setAnimalData(cougarData);
-        super.setAnimalSystems(cougarSystems);
+        super.setAnimalData(jellyfishData);
+        super.setAnimalSystems(jellyfishSystems);
     }
 }

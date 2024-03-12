@@ -20,11 +20,11 @@ public class Bat extends Animal {
     public Bat(String scientificName, String commonName, String gender) {
         super();
 
-        AnimalData cougarData = new AnimalData(scientificName, commonName, "Microchiroptera", gender);
+        AnimalData batData = new AnimalData(scientificName, commonName, "Microchiroptera", gender);
         List<Sensors> batSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Echolocation);
-        AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), batSensors, new CarnivorousDigestion());
+        AnimalSystems batSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), batSensors, new CarnivorousDigestion());
 
-        super.setAnimalData(cougarData);
-        super.setAnimalSystems(cougarSystems);
+        super.setAnimalData(batData);
+        super.setAnimalSystems(batSystems);
     }
 }

@@ -22,11 +22,11 @@ public class Condor extends Animal {
     public Condor(String scientificName, String commonName, String gender) {
         super();
 
-        AnimalData cougarData = new AnimalData(scientificName, commonName, "Cathartidae", gender);
+        AnimalData condorData = new AnimalData(scientificName, commonName, "Cathartidae", gender);
         List<Sensors> condorSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Touch);
-        AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), condorSensors, new CarnivorousDigestion());
+        AnimalSystems condorSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), condorSensors, new CarnivorousDigestion());
 
-        super.setAnimalData(cougarData);
-        super.setAnimalSystems(cougarSystems);
+        super.setAnimalData(condorData);
+        super.setAnimalSystems(condorSystems);
     }
 }

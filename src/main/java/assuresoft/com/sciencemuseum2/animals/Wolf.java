@@ -24,12 +24,12 @@ public class Wolf extends Animal {
     public Wolf(String scientificName, String commonName, String gender) {
         super();
 
-        AnimalData cougarData = new AnimalData(scientificName, commonName, "Canidae", gender);
+        AnimalData wolfData = new AnimalData(scientificName, commonName, "Canidae", gender);
         List<Sensors> wolfSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
-        AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), wolfSensors, new CarnivorousDigestion());
+        AnimalSystems wolfSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), wolfSensors, new CarnivorousDigestion());
 
-        super.setAnimalData(cougarData);
-        super.setAnimalSystems(cougarSystems);
+        super.setAnimalData(wolfData);
+        super.setAnimalSystems(wolfSystems);
     }
 
 

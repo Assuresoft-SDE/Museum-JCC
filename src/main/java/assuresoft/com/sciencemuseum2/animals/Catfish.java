@@ -20,11 +20,11 @@ public class Catfish extends Animal {
     public Catfish(String scientificName, String commonName, String gender) {
         super();
 
-        AnimalData cougarData = new AnimalData(scientificName, commonName, "Siluridae", gender);
+        AnimalData catfishData = new AnimalData(scientificName, commonName, "Siluridae", gender);
         List<Sensors> catfishSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
-        AnimalSystems cougarSystems = new AnimalSystems(new GillsRespiration(), new SexualReproduction(), catfishSensors, new OmnivorousDigestion());
+        AnimalSystems catfishSystems = new AnimalSystems(new GillsRespiration(), new SexualReproduction(), catfishSensors, new OmnivorousDigestion());
 
-        super.setAnimalData(cougarData);
-        super.setAnimalSystems(cougarSystems);
+        super.setAnimalData(catfishData);
+        super.setAnimalSystems(catfishSystems);
     }
 }
