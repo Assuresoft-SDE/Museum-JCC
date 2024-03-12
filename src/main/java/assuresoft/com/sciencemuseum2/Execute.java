@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Execute {
     public static void main(String[] args) {
-        List<Sensors> sensors = new ArrayList(List.of(Sensors.Echolocation, Sensors.Vision, Sensors.Smell));
+        List<Sensors> sensors = new ArrayList(List.of(Sensors.Echolocation, Sensors.Hearing,Sensors.Vision, Sensors.Smell));
         AnimalData cougarData = new AnimalData("Pumar concolor", "Cougar","Felidae", "Male");
         AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(),sensors, new CarnivorousDigestion());
         Animal cougar = new Cougar(cougarSystems, cougarData);
