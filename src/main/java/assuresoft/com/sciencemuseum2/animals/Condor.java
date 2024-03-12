@@ -20,8 +20,6 @@ public class Condor extends Animal {
 
 
     public Condor(String scientificName, String commonName, String gender) {
-        super();
-
         AnimalData condorData = new AnimalData(scientificName, commonName, "Cathartidae", gender);
         List<Sensors> condorSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Touch);
         AnimalSystems condorSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), condorSensors, new CarnivorousDigestion());

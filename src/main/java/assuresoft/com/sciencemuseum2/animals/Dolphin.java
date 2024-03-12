@@ -18,8 +18,6 @@ public class Dolphin extends Animal {
 
 
     public Dolphin(String scientificName, String commonName, String gender) {
-        super();
-
         AnimalData dolphinData = new AnimalData(scientificName, commonName, "Delphinidae", gender);
         List<Sensors> dolphinSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Touch, Sensors.Echolocation, Sensors.Taste);
         AnimalSystems dolphinSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), dolphinSensors, new CarnivorousDigestion());

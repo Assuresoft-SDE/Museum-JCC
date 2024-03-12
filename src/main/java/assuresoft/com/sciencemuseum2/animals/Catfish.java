@@ -18,8 +18,6 @@ public class Catfish extends Animal {
 
 
     public Catfish(String scientificName, String commonName, String gender) {
-        super();
-
         AnimalData catfishData = new AnimalData(scientificName, commonName, "Siluridae", gender);
         List<Sensors> catfishSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
         AnimalSystems catfishSystems = new AnimalSystems(new GillsRespiration(), new SexualReproduction(), catfishSensors, new OmnivorousDigestion());
