@@ -3,6 +3,7 @@ package assuresoft.com.sciencemuseum2.systems.digestive;
 import assuresoft.com.sciencemuseum2.interfaces.DigestiveSystem;
 
 public class OmnivorousDigestion implements DigestiveSystem {
+
     @Override
     public void intake() {
         System.out.println("Consuming a variety of plant and animal-based foods.");

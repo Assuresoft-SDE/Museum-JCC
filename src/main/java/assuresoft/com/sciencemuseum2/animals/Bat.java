@@ -5,6 +5,7 @@ import assuresoft.com.sciencemuseum2.AnimalData;
 import assuresoft.com.sciencemuseum2.AnimalSystems;
 
 public class Bat extends Animal {
+
     public Bat(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }

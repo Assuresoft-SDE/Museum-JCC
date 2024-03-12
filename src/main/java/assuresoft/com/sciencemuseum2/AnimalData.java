@@ -13,6 +13,7 @@ public class AnimalData {
         this.gender = gender;
     }
 
+
     public String getScientificName() {
         return scientificName;
     }
