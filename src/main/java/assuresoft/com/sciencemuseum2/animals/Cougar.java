@@ -20,12 +20,11 @@ public class Cougar extends Animal {
     }
 
     public Cougar(String scientificName, String commonName, String gender) {
-        super();
-        AnimalData cougarData = new AnimalData(scientificName, commonName,"Felidae", gender);
+        AnimalData cougarData = new AnimalData(scientificName, commonName, "Felidae", gender);
+        List<Sensors> cougarSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
+        AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), cougarSensors, new CarnivorousDigestion());
 
-        List<Sensors> sensors = new ArrayList(List.of(Sensors.Hearing,Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste ));
-        AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(),sensors, new CarnivorousDigestion());
-        super.setAnimalData( cougarData);
-        super.setAnimalSystems( cougarSystems);
+        super.setAnimalData(cougarData);
+        super.setAnimalSystems(cougarSystems);
     }
 }
