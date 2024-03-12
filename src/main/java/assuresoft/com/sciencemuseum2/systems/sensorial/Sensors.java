@@ -8,7 +8,8 @@ public enum Sensors implements SensorialSystem {
     Taste,
     Touch,
     Hearing,
-    Echolocation;
+    Echolocation,
+    Cell;
 
     @Override
     public void recognize() {
