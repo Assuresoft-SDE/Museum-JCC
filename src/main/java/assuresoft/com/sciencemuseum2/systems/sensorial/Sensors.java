@@ -5,7 +5,7 @@ import assuresoft.com.sciencemuseum2.interfaces.SensorialSystem;
 public enum Sensors implements SensorialSystem {
     Vision,
     Smell,
-    Enthusiasm,
+    Taste,
     Touch,
     Hearing,
     Echolocation;
