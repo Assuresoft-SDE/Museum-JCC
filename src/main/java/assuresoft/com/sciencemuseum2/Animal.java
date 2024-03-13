@@ -11,7 +11,6 @@ public abstract class Animal {
     public Animal() {
     }
 
-
     public Animal(AnimalSystems animalSystems, AnimalData animalData) {
         this.animalSystems = animalSystems;
         this.animalData = animalData;
@@ -56,5 +55,18 @@ public abstract class Animal {
         System.out.println("Checking environment with the following sensors:");
         animalSystems.checkEnvironment();
         System.out.println("Finished checking environment.\n");
+    }
+
+    public void getAnimalInformation() {
+        animalData.getAnimalData();
+    }
+
+    public void performLifeProcesses() {
+        translation();
+        sleep();
+        eat();
+        breathe();
+        reproduce();
+        checkEnvironment();
     }
 }

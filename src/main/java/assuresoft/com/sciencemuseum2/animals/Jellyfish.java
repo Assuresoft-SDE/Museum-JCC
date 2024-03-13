@@ -19,13 +19,20 @@ public class Jellyfish extends Animal {
         super(animalSystems, animalData);
     }
 
-
-    public Jellyfish(String scientificName, String commonName, String gender) {
+    public Jellyfish(String scientificName, String commonName, String gender, int numberOfTentacles, int tentacleLengthCm) {
         AnimalData jellyfishData = new AnimalData(scientificName, commonName, "Cnidaria", gender);
         List<Sensors> jellyfishSensors = List.of(Sensors.Cell);
         AnimalSystems jellyfishSystems = new AnimalSystems(new IntegumentaryRespiration(), new SexualReproduction(), jellyfishSensors, new CarnivorousDigestion());
-
+        this.numberOfTentacles = numberOfTentacles;
+        this.tentacleLengthCm = tentacleLengthCm;
         super.setAnimalData(jellyfishData);
         super.setAnimalSystems(jellyfishSystems);
+    }
+
+    @Override
+    public void getAnimalInformation() {
+        super.getAnimalInformation();
+        System.out.println("Number of Tentacles: " + numberOfTentacles);
+        System.out.println("Tentacles Length in Centimeters: " + tentacleLengthCm);
     }
 }
