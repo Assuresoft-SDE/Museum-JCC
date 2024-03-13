@@ -6,7 +6,8 @@ public class AsexualReproduction implements ReproductiveSystem {
 
     @Override
     public void reproduce() {
-        displayMessage("Asexually reproducing...");
+        cellularDivision();
+        gemmation();
     }
 
     public void cellularDivision(){

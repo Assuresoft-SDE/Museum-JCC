@@ -6,7 +6,8 @@ public class SexualReproduction implements ReproductiveSystem {
 
     @Override
     public void reproduce() {
-        displayMessage("\tSexually reproducing...");
+        mating();
+        fertilization();
     }
 
     public void mating() {
