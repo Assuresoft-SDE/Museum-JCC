@@ -13,7 +13,8 @@ public class WolfPack{
 
     public void addWolfToPack(Wolf newWolf){
         System.out.println("Checking if wolf is Alpha...");
-        if (newWolf.isAlpha()){
+
+        if (newWolf.isAlpha()) {
             System.out.println("The wolf is alpha! He will fight with the Wolf Pack's Alpha now.");
             System.out.println("The wolf lost, now he will not be considered alpha anymore.");
             newWolf.setAlpha(false);
