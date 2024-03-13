@@ -11,12 +11,10 @@ public abstract class Animal {
     public Animal() {
     }
 
-
     public Animal(AnimalSystems animalSystems, AnimalData animalData) {
         this.animalSystems = animalSystems;
         this.animalData = animalData;
     }
-
 
     public void setAnimalSystems(AnimalSystems animalSystems){
         this.animalSystems = animalSystems;
@@ -59,11 +57,7 @@ public abstract class Animal {
     }
 
     public void getAnimalInformation() {
-        System.out.println("Animal Information");
-        System.out.println("Scientific Name: " + animalData.getScientificName());
-        System.out.println("Common Name: " + animalData.getCommonName());
-        System.out.println("Family: " + animalData.getFamily());
-        System.out.println("Gender: " + animalData.getGender());
+        animalData.getAnimalData();
     }
 
     public void performLifeProcesses() {

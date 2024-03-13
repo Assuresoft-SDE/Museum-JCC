@@ -33,7 +33,7 @@ public class Wolf extends Animal {
     public void getAnimalInformation() {
         super.getAnimalInformation();
         System.out.println("Coat Color: " + coatColor);
-        System.out.println("isAlpha: " + (isAlpha ? "Yes" : "No"));
+        System.out.println("Alpha: " + (isAlpha ? "Yes" : "No"));
     }
 
     public void formWolfPack() {

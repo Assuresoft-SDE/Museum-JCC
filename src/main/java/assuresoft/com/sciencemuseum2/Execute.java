@@ -16,7 +16,8 @@ public class Execute {
         condor.getAnimalInformation();
         condor.performLifeProcesses();
 
-        Animal cougar = new Cougar("Pumar concolor incarum", "Andean Cougar","Male", "Yellowish-brown with black spots and rosettes. ");
+        Animal cougar = new Cougar("Pumar concolor incarum", "Andean Cougar",
+                "Male", "Yellowish-brown with black spots and rosettes. ");
         cougar.getAnimalInformation();
         cougar.performLifeProcesses();
 
@@ -24,11 +25,13 @@ public class Execute {
         catfish.getAnimalInformation();
         catfish.performLifeProcesses();
 
-        Animal wolf = new Wolf("Canis lupus","Wolf", "Male", "White", false);
+        Animal wolf = new Wolf("Canis lupus","Wolf", "Male",
+                "White", false);
         wolf.getAnimalInformation();
         wolf.performLifeProcesses();
 
-        Animal jellyfish = new Jellyfish("Aurelia aurita", "Moon Jellyfish", "Hermaphroditic", 100, 300);
+        Animal jellyfish = new Jellyfish("Aurelia aurita", "Moon Jellyfish",
+                "Hermaphroditic", 100, 300);
         jellyfish.getAnimalInformation();
         jellyfish.performLifeProcesses();
 

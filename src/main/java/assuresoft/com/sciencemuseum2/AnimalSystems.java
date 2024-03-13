@@ -21,7 +21,6 @@ public class AnimalSystems {
         this.digestiveSystem = digestiveSystem;
     }
 
-
     public void executeEatingProcess() {
         digestiveSystem.intake();
         digestiveSystem.mechanicalDigestion();

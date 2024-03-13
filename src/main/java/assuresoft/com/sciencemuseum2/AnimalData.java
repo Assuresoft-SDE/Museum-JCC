@@ -13,6 +13,13 @@ public class AnimalData {
         this.gender = gender;
     }
 
+    public void getAnimalData() {
+        System.out.println("Animal Information");
+        System.out.println("Scientific Name: " + getScientificName());
+        System.out.println("Common Name: " + getCommonName());
+        System.out.println("Family: " + getFamily());
+        System.out.println("Gender: " + getGender());
+    }
 
     public String getScientificName() {
         return scientificName;
