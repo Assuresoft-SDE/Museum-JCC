@@ -19,12 +19,18 @@ public class Cougar extends Animal {
         super(animalSystems, animalData);
     }
 
-    public Cougar(String scientificName, String commonName, String gender) {
+    public Cougar(String scientificName, String commonName, String gender, String coatColor) {
         AnimalData cougarData = new AnimalData(scientificName, commonName, "Felidae", gender);
         List<Sensors> cougarSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
         AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), cougarSensors, new CarnivorousDigestion());
-
+        this.coatColor = coatColor;
         super.setAnimalData(cougarData);
         super.setAnimalSystems(cougarSystems);
+    }
+
+    @Override
+    public void getAnimalInformation() {
+        super.getAnimalInformation();
+        System.out.println("Coat Color: " + coatColor);
     }
 }
