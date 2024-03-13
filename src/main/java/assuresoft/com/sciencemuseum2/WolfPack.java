@@ -2,12 +2,13 @@ package assuresoft.com.sciencemuseum2;
 
 import assuresoft.com.sciencemuseum2.animals.Wolf;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WolfPack{
     private List<Wolf> wolfPackMembers;
     public WolfPack(Wolf maleWolf, Wolf femaleWolf){
-        wolfPackMembers = List.of(maleWolf,femaleWolf);
+        wolfPackMembers = new ArrayList<>(List.of(maleWolf,femaleWolf));
     }
 
 
@@ -20,7 +21,7 @@ public class WolfPack{
         }else {
             System.out.println("The wolf is not alpha, he will have no problem joining the Wolf Pack.");
         }
-        System.out.println("The wolf has joined the Wolf Pack.");
+        System.out.println("The wolf has joined the Wolf Pack.\n");
         wolfPackMembers.add(newWolf);
         newWolf.joinWolfPack(this);
     }
