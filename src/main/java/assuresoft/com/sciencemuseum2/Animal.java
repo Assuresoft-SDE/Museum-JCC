@@ -16,6 +16,7 @@ public abstract class Animal {
         this.animalData = animalData;
     }
 
+
     public void setAnimalSystems(AnimalSystems animalSystems){
         this.animalSystems = animalSystems;
     }

@@ -29,6 +29,7 @@ public class Wolf extends Animal {
         super.setAnimalSystems(wolfSystems);
     }
 
+
     @Override
     public void getAnimalInformation() {
         super.getAnimalInformation();

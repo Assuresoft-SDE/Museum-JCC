@@ -21,6 +21,7 @@ public class AnimalData {
         System.out.println("Gender: " + getGender());
     }
 
+
     public String getScientificName() {
         return scientificName;
     }
