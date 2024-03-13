@@ -6,14 +6,15 @@ public class AsexualReproduction implements ReproductiveSystem {
 
     @Override
     public void reproduce() {
-        System.out.println("\tAsexually reproducing...");
+        cellularDivision();
+        gemmation();
     }
 
     public void cellularDivision(){
-        System.out.println("Reproduction through the division of a single cell into two identical daughter cells.");
+        displayMessage("Reproduction through the division of a single cell into two identical daughter cells.");
     }
 
     public void gemmation(){
-        System.out.println("Reproduction through the formation of a small bud or outgrowth, which detaches to become a new organism.");
+        displayMessage("Reproduction through the formation of a small bud or outgrowth, which detaches to become a new organism.");
     }
 }
