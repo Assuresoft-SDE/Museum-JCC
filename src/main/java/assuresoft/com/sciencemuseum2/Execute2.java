@@ -1,7 +1,6 @@
 package assuresoft.com.sciencemuseum2;
 
 import assuresoft.com.sciencemuseum2.animals.Wolf;
-
 import java.security.KeyStore;
 
 public class Execute2 {
