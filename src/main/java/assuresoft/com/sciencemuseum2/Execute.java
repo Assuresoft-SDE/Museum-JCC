@@ -3,8 +3,6 @@ package assuresoft.com.sciencemuseum2;
 import assuresoft.com.sciencemuseum2.animals.*;
 
 public class Execute {
-
-
     public static void main(String[] args) {
         Animal bat = new Bat("Chiroptera", "Bat", "Male");
         bat.getAnimalInformation();
