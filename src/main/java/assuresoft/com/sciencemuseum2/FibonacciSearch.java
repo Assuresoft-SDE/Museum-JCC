@@ -23,23 +23,22 @@ public class FibonacciSearch {
 
         while (currentFibonacci > 1) {
             int i = checkValidLocation(eliminatedFront + twoFibonaccisAgo, n - 1);
-            if (list.get(i) < x) {
-                currentFibonacci = previousFibonacci;
-                previousFibonacci = twoFibonaccisAgo;
-                twoFibonaccisAgo = currentFibonacci - previousFibonacci;
-                eliminatedFront = i;
+                if (list.get(i) < x) {
+                    currentFibonacci = previousFibonacci;
+                    previousFibonacci = twoFibonaccisAgo;
+                    twoFibonaccisAgo = currentFibonacci - previousFibonacci;
+                    eliminatedFront = i;
             }
-            else if (list.get(i) > x) {
-                currentFibonacci = twoFibonaccisAgo;
-                previousFibonacci = previousFibonacci - twoFibonaccisAgo;
-                twoFibonaccisAgo = currentFibonacci - previousFibonacci;
+                else if (list.get(i) > x) {
+                    currentFibonacci = twoFibonaccisAgo;
+                    previousFibonacci = previousFibonacci - twoFibonaccisAgo;
+                    twoFibonaccisAgo = currentFibonacci - previousFibonacci;
             }
-            else
-                return i;
+                else
+                    return i;
         }
-
-        if (previousFibonacci == 1 && list.get(n - 1) == x)
-            return n - 1;
+            if (previousFibonacci == 1 && list.get(n - 1) == x)
+                return n - 1;
 
         return -1;
     }
