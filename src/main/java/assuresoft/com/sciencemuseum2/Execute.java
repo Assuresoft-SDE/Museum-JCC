@@ -30,8 +30,10 @@ public class Execute {
         wolf.getAnimalInformation();
         wolf.performLifeProcesses();
 
+        int tentaclesNumber = 100;
+        int sizeInCm = 300;
         Animal jellyfish = new Jellyfish("Aurelia aurita", "Moon Jellyfish",
-                "Hermaphroditic", 100, 300);
+                "Hermaphroditic", tentaclesNumber, sizeInCm);
         jellyfish.getAnimalInformation();
         jellyfish.performLifeProcesses();
 
