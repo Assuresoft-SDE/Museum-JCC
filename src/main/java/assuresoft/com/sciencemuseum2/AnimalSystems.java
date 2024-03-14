@@ -13,8 +13,12 @@ public class AnimalSystems {
     private final List<Sensors> sensorsList;
     private final DigestiveSystem digestiveSystem;
 
-    public AnimalSystems(RespiratorySystem respiratorySystem, ReproductiveSystem reproductiveSystem,
-                         List<Sensors> sensorsList, DigestiveSystem digestiveSystem) {
+    public AnimalSystems(
+        RespiratorySystem respiratorySystem,
+        ReproductiveSystem reproductiveSystem,
+        List<Sensors> sensorsList,
+        DigestiveSystem digestiveSystem
+    ) {
         this.respiratorySystem = respiratorySystem;
         this.reproductiveSystem = reproductiveSystem;
         this.sensorsList = sensorsList;
