@@ -6,7 +6,7 @@ public class FibonacciSearch {
     private static final int PENULTIMATE_FIBONACCI = 0;
     private static final int PREVIOUS_FIBONACCI = 1;
 
-    private static int checkValidLocation(int indexToCheck, int maxIndex) {
+    private static int getValidLocation(int indexToCheck, int maxIndex) {
         return Math.min(indexToCheck, maxIndex);
     }
 
@@ -26,7 +26,7 @@ public class FibonacciSearch {
         int eliminatedFront = NOT_FOUND;
 
         while (currentFibonacci > 1) {
-            int index = checkValidLocation(eliminatedFront + penultimateFibonacci, listSize - 1);
+            int index = getValidLocation(eliminatedFront + penultimateFibonacci, listSize - 1);
                 if (list.get(index) < searchItem) {
                     currentFibonacci = previousFibonacci;
                     previousFibonacci = penultimateFibonacci;
@@ -60,4 +60,3 @@ public class FibonacciSearch {
             System.out.print(x + " isn't present in the list");
     }
 }
-
