@@ -19,6 +19,7 @@ public class Cougar extends Animal {
         super(animalSystems, animalData);
     }
 
+
     public Cougar(String scientificName, String commonName, String gender, String coatColor) {
         AnimalData cougarData = new AnimalData(scientificName, commonName, "Felidae", gender);
         List<Sensors> cougarSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
@@ -27,6 +28,7 @@ public class Cougar extends Animal {
         super.setAnimalData(cougarData);
         super.setAnimalSystems(cougarSystems);
     }
+
 
     @Override
     public void getAnimalInformation() {

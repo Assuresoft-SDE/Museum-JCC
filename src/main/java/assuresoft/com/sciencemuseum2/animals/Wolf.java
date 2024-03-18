@@ -20,6 +20,7 @@ public class Wolf extends Animal {
         super(animalSystems, animalData);
     }
 
+
     public Wolf(String scientificName, String commonName, String gender, String coatColor, boolean isAlpha) {
         AnimalData wolfData = new AnimalData(scientificName, commonName, "Canidae", gender);
         List<Sensors> wolfSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);

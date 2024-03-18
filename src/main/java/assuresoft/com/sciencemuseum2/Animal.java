@@ -7,6 +7,7 @@ public abstract class Animal {
     public Animal() {
     }
 
+
     public Animal(AnimalSystems animalSystems, AnimalData animalData) {
         this.animalSystems = animalSystems;
         this.animalData = animalData;
