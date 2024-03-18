@@ -29,18 +29,22 @@ public class FibonacciSearch {
                     previousFibonacci = penultimateFibonacci;
                     penultimateFibonacci = currentFibonacci - previousFibonacci;
                     eliminatedFront = index;
-            }
+                }
                 else if (list.get(index) > searchItem) {
-                    currentFibonacci = penultimateFibonacci;
-                    previousFibonacci = previousFibonacci - penultimateFibonacci;
-                    penultimateFibonacci = currentFibonacci - previousFibonacci;
-            }
-                else
+                        currentFibonacci = penultimateFibonacci;
+                        previousFibonacci = previousFibonacci - penultimateFibonacci;
+                        penultimateFibonacci = currentFibonacci - previousFibonacci;
+                    }
+                else {
                     return index;
+                }
         }
-            if (previousFibonacci == 1 && list.get(listSize - 1) == searchItem)
-                return listSize - 1;
+
+        if (previousFibonacci == 1 && list.get(listSize - 1) == searchItem) {
+            return listSize - 1;
+        }
 
         return -1;
     }
 }
+
