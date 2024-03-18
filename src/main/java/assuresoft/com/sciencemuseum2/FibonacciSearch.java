@@ -3,44 +3,44 @@ import java.util.*;
 
 public class FibonacciSearch {
 
-    public static int checkValidLocation(int indexToCheck, int maxIndex) {
+    private static int checkValidLocation(int indexToCheck, int maxIndex) {
         return Math.min(indexToCheck, maxIndex);
     }
 
-    public static int fibonacciSearch(List<Integer> list, int x) {
-        int n = list.size();
-        int twoFibonaccisAgo = 0;
+    public static int fibonacciSearch(List<Integer> list, int searchItem) {
+        int listSize = list.size();
+        int penultimateFibonacci = 0;
         int previousFibonacci = 1;
-        int currentFibonacci = twoFibonaccisAgo + previousFibonacci;
+        int currentFibonacci = penultimateFibonacci + previousFibonacci;
 
-        while (currentFibonacci < n) {
-            twoFibonaccisAgo = previousFibonacci;
+        // Find the fibonacci number that is equal or major to the array's size
+        while (currentFibonacci < listSize) {
+            penultimateFibonacci = previousFibonacci;
             previousFibonacci = currentFibonacci;
-            currentFibonacci = twoFibonaccisAgo + previousFibonacci;
+            currentFibonacci = penultimateFibonacci + previousFibonacci;
         }
 
         int eliminatedFront = -1;
 
         while (currentFibonacci > 1) {
-            int i = checkValidLocation(eliminatedFront + twoFibonaccisAgo, n - 1);
-                if (list.get(i) < x) {
+            int index = checkValidLocation(eliminatedFront + penultimateFibonacci, listSize - 1);
+                if (list.get(index) < searchItem) {
                     currentFibonacci = previousFibonacci;
-                    previousFibonacci = twoFibonaccisAgo;
-                    twoFibonaccisAgo = currentFibonacci - previousFibonacci;
-                    eliminatedFront = i;
+                    previousFibonacci = penultimateFibonacci;
+                    penultimateFibonacci = currentFibonacci - previousFibonacci;
+                    eliminatedFront = index;
             }
-                else if (list.get(i) > x) {
-                    currentFibonacci = twoFibonaccisAgo;
-                    previousFibonacci = previousFibonacci - twoFibonaccisAgo;
-                    twoFibonaccisAgo = currentFibonacci - previousFibonacci;
+                else if (list.get(index) > searchItem) {
+                    currentFibonacci = penultimateFibonacci;
+                    previousFibonacci = previousFibonacci - penultimateFibonacci;
+                    penultimateFibonacci = currentFibonacci - previousFibonacci;
             }
                 else
-                    return i;
+                    return index;
         }
-            if (previousFibonacci == 1 && list.get(n - 1) == x)
-                return n - 1;
+            if (previousFibonacci == 1 && list.get(listSize - 1) == searchItem)
+                return listSize - 1;
 
         return -1;
     }
-
 }
