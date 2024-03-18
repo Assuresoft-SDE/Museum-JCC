@@ -1,9 +1,5 @@
 package assuresoft.com.sciencemuseum2;
 
-import assuresoft.com.sciencemuseum2.interfaces.DigestiveSystem;
-import assuresoft.com.sciencemuseum2.interfaces.ReproductiveSystem;
-import assuresoft.com.sciencemuseum2.interfaces.RespiratorySystem;
-
 public abstract class Animal {
     private AnimalSystems animalSystems;
     private AnimalData animalData;
@@ -17,11 +13,11 @@ public abstract class Animal {
     }
 
 
-    public void setAnimalSystems(AnimalSystems animalSystems){
+    public void setAnimalSystems(AnimalSystems animalSystems) {
         this.animalSystems = animalSystems;
     }
 
-    public  void setAnimalData(AnimalData animalData){
+    public void setAnimalData(AnimalData animalData) {
         this.animalData = animalData;
     }
 
