@@ -19,6 +19,7 @@ public class Jellyfish extends Animal {
         super(animalSystems, animalData);
     }
 
+
     public Jellyfish(String scientificName, String commonName, String gender, int numberOfTentacles, int tentacleLengthCm) {
         AnimalData jellyfishData = new AnimalData(scientificName, commonName, "Cnidaria", gender);
         List<Sensors> jellyfishSensors = List.of(Sensors.Cell);
@@ -28,6 +29,7 @@ public class Jellyfish extends Animal {
         super.setAnimalData(jellyfishData);
         super.setAnimalSystems(jellyfishSystems);
     }
+
 
     @Override
     public void getAnimalInformation() {

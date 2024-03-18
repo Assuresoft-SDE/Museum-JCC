@@ -15,6 +15,7 @@ public class Bat extends Animal {
         super(animalSystems, animalData);
     }
 
+
     public Bat(String scientificName, String commonName, String gender) {
         AnimalData batData = new AnimalData(scientificName, commonName, "Microchiroptera", gender);
         List<Sensors> batSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Echolocation);

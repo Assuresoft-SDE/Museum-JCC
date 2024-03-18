@@ -3,6 +3,7 @@ package assuresoft.com.sciencemuseum2.animals;
 import assuresoft.com.sciencemuseum2.Animal;
 import assuresoft.com.sciencemuseum2.AnimalData;
 import assuresoft.com.sciencemuseum2.AnimalSystems;
+import assuresoft.com.sciencemuseum2.WolfPack;
 import assuresoft.com.sciencemuseum2.systems.digestive.CarnivorousDigestion;
 import assuresoft.com.sciencemuseum2.systems.reproductive.SexualReproduction;
 import assuresoft.com.sciencemuseum2.systems.respiratory.LungRespiration;
@@ -13,11 +14,12 @@ public class Wolf extends Animal {
 
     private String coatColor;
     private boolean isAlpha;
-    private List<Wolf> wolfPackMembers;
+    private WolfPack wolfPack;
 
     public Wolf(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }
+
 
     public Wolf(String scientificName, String commonName, String gender, String coatColor, boolean isAlpha) {
         AnimalData wolfData = new AnimalData(scientificName, commonName, "Canidae", gender);
@@ -37,7 +39,15 @@ public class Wolf extends Animal {
         System.out.println("Alpha: " + (isAlpha ? "Yes" : "No"));
     }
 
-    public void formWolfPack() {
-        //TODO: complete this method.
+    public void joinWolfPack(WolfPack wolfPack) {
+        this.wolfPack = wolfPack;
+    }
+
+    public boolean isAlpha() {
+        return isAlpha;
+    }
+
+    public void setAlpha(boolean alpha) {
+        isAlpha = alpha;
     }
 }
