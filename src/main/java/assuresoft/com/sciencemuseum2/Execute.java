@@ -26,7 +26,7 @@ public class Execute {
         catfish.performLifeProcesses();
 
         Animal wolf = new Wolf("Canis lupus","Wolf", "Male",
-                "White", false);
+                "White", WolfRole.EXPLORER);
         wolf.getAnimalInformation();
         wolf.performLifeProcesses();
 

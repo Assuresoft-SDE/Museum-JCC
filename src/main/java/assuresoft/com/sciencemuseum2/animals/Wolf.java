@@ -4,6 +4,7 @@ import assuresoft.com.sciencemuseum2.Animal;
 import assuresoft.com.sciencemuseum2.AnimalData;
 import assuresoft.com.sciencemuseum2.AnimalSystems;
 import assuresoft.com.sciencemuseum2.WolfPack;
+import assuresoft.com.sciencemuseum2.WolfRole;
 import assuresoft.com.sciencemuseum2.systems.digestive.CarnivorousDigestion;
 import assuresoft.com.sciencemuseum2.systems.reproductive.SexualReproduction;
 import assuresoft.com.sciencemuseum2.systems.respiratory.LungRespiration;
@@ -12,20 +13,20 @@ import java.util.List;
 
 public class Wolf extends Animal {
     private String coatColor;
-    private boolean isAlpha;
     private WolfPack wolfPack;
+    private WolfRole role;
 
     public Wolf(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }
 
 
-    public Wolf(String scientificName, String commonName, String gender, String coatColor, boolean isAlpha) {
+    public Wolf(String scientificName, String commonName, String gender, String coatColor, WolfRole wolfRole) {
         AnimalData wolfData = new AnimalData(scientificName, commonName, "Canidae", gender);
         List<Sensors> wolfSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
         AnimalSystems wolfSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), wolfSensors, new CarnivorousDigestion());
         this.coatColor = coatColor;
-        this.isAlpha = isAlpha;
+        this.role = wolfRole;
         super.setAnimalData(wolfData);
         super.setAnimalSystems(wolfSystems);
     }
@@ -35,7 +36,7 @@ public class Wolf extends Animal {
     public void getAnimalInformation() {
         super.getAnimalInformation();
         System.out.println("Coat Color: " + coatColor);
-        System.out.println("Alpha: " + (isAlpha ? "Yes" : "No"));
+        System.out.println("Role: " + role);
     }
 
     public void joinWolfPack(WolfPack wolfPack) {
@@ -43,10 +44,14 @@ public class Wolf extends Animal {
     }
 
     public boolean isAlpha() {
-        return isAlpha;
+        return role==WolfRole.ALPHA;
     }
 
-    public void setAlpha(boolean alpha) {
-        isAlpha = alpha;
+    public WolfRole getWolfRole() {
+        return role;
+    }
+
+    public void setWolfRole(WolfRole wolfRole) {
+        this.role = wolfRole;
     }
 }
