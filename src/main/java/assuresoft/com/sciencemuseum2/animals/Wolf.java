@@ -11,7 +11,6 @@ import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
 
 public class Wolf extends Animal {
-
     private String coatColor;
     private boolean isAlpha;
     private WolfPack wolfPack;

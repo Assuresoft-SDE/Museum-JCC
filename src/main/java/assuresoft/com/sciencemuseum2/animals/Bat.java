@@ -10,7 +10,6 @@ import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
 
 public class Bat extends Animal {
-
     public Bat(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }

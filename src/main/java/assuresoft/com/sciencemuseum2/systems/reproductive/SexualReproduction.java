@@ -3,7 +3,6 @@ package assuresoft.com.sciencemuseum2.systems.reproductive;
 import assuresoft.com.sciencemuseum2.interfaces.ReproductiveSystem;
 
 public class SexualReproduction implements ReproductiveSystem {
-
     @Override
     public void reproduce() {
         mating();

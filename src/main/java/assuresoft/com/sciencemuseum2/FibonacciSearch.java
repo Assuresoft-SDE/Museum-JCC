@@ -28,20 +28,21 @@ public class FibonacciSearch {
 
         while (currentFibonacci > 1) {
             int index = getValidLocation(eliminatedFront + penultimateFibonacci, listSize - 1);
-                if (list.get(index) < searchItem) {
-                    currentFibonacci = previousFibonacci;
-                    previousFibonacci = penultimateFibonacci;
-                    penultimateFibonacci = currentFibonacci - previousFibonacci;
-                    eliminatedFront = index;
-                }
-                else if (list.get(index) > searchItem) {
-                        currentFibonacci = penultimateFibonacci;
-                        previousFibonacci = previousFibonacci - penultimateFibonacci;
-                        penultimateFibonacci = currentFibonacci - previousFibonacci;
-                    }
-                else {
-                    return index;
-                }
+
+            if (list.get(index) < searchItem) {
+                currentFibonacci = previousFibonacci;
+                previousFibonacci = penultimateFibonacci;
+                penultimateFibonacci = currentFibonacci - previousFibonacci;
+                eliminatedFront = index;
+            }
+            else if (list.get(index) > searchItem) {
+                currentFibonacci = penultimateFibonacci;
+                previousFibonacci = previousFibonacci - penultimateFibonacci;
+                penultimateFibonacci = currentFibonacci - previousFibonacci;
+            }
+            else {
+                return index;
+            }
         }
 
         if (previousFibonacci == PREVIOUS_FIBONACCI && list.get(listSize - 1) == searchItem) {
@@ -50,5 +51,4 @@ public class FibonacciSearch {
 
         return NOT_FOUND;
     }
-
 }

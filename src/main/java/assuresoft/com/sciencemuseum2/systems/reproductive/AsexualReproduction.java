@@ -3,7 +3,6 @@ package assuresoft.com.sciencemuseum2.systems.reproductive;
 import assuresoft.com.sciencemuseum2.interfaces.ReproductiveSystem;
 
 public class AsexualReproduction implements ReproductiveSystem {
-
     @Override
     public void reproduce() {
         cellularDivision();

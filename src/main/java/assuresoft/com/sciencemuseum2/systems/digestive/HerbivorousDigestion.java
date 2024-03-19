@@ -3,7 +3,6 @@ package assuresoft.com.sciencemuseum2.systems.digestive;
 import assuresoft.com.sciencemuseum2.interfaces.DigestiveSystem;
 
 public class HerbivorousDigestion implements DigestiveSystem {
-
     @Override
     public void intake() {
         displayMessage("Consuming plant material.");

@@ -7,11 +7,9 @@ import assuresoft.com.sciencemuseum2.systems.digestive.CarnivorousDigestion;
 import assuresoft.com.sciencemuseum2.systems.reproductive.SexualReproduction;
 import assuresoft.com.sciencemuseum2.systems.respiratory.LungRespiration;
 import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
-
 import java.util.List;
 
 public class Condor extends Animal {
-
     private String coatColor;
 
     public Condor(AnimalSystems animalSystems, AnimalData animalData) {
