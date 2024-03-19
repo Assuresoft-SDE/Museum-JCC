@@ -3,11 +3,19 @@ package assuresoft.com.sciencemuseum2;
 public abstract class Animal {
     private AnimalSystems animalSystems;
     private AnimalData animalData;
-
+    /**
+     * Constructs an instance of Animal.
+     */
     public Animal() {
     }
 
 
+    /**
+     * Constructs an instance of Animal with provided AnimalSystems and AnimalData.
+     *
+     * @param animalSystems The systems associated with the animal.
+     * @param animalData The data associated with the animal.
+     */
     public Animal(AnimalSystems animalSystems, AnimalData animalData) {
         this.animalSystems = animalSystems;
         this.animalData = animalData;
