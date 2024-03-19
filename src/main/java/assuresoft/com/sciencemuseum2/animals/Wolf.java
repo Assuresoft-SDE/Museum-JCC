@@ -10,9 +10,9 @@ import assuresoft.com.sciencemuseum2.systems.reproductive.SexualReproduction;
 import assuresoft.com.sciencemuseum2.systems.respiratory.LungRespiration;
 import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
+import java.util.Objects;
 
-public class Wolf extends Animal {
-
+public class Wolf extends Animal implements Comparable<Wolf> {
     private String coatColor;
     private WolfPack wolfPack;
     private WolfRole role;
@@ -54,5 +54,10 @@ public class Wolf extends Animal {
 
     public void setWolfRole(WolfRole wolfRole) {
         this.role = wolfRole;
+    }
+
+    @Override
+    public int compareTo(Wolf anotherWolf) {
+        return this.role.compareTo(anotherWolf.getWolfRole());
     }
 }

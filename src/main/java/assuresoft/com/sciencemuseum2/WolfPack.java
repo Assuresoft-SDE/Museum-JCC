@@ -27,4 +27,16 @@ public class WolfPack{
         wolfPackMembers.add(newWolf);
         newWolf.joinWolfPack(this);
     }
+
+    public void searchNewArea(){
+        System.out.println("Looking for the wolf explorer \n");
+        int indexWolfExplorer = FibonacciSearch.fibonacciSearch( wolfPackMembers, new Wolf("","","","",WolfRole.EXPLORER));
+        if( indexWolfExplorer == -1 ){
+            System.out.println("explorer wolf not found");
+        }
+        else {
+            Wolf wolfExplorer = wolfPackMembers.get(indexWolfExplorer);
+            wolfExplorer.getAnimalInformation();
+        }
+    }
 }
