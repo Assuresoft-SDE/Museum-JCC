@@ -51,13 +51,4 @@ public class FibonacciSearch {
         return NOT_FOUND;
     }
 
-    public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(10, 22, 35, 40, 45, 50, 80, 82, 85, 90, 100);
-        int x = 85;
-        int index = fibonacciSearch(list, x);
-        if (index >= 0)
-            System.out.print("Found element " + list. get(index) + " at index: " + index);
-        else
-            System.out.print(x + " isn't present in the list");
-    }
 }
