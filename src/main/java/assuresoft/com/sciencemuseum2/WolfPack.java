@@ -17,7 +17,7 @@ public class WolfPack{
         if (newWolf.isAlpha()) {
             System.out.println("The wolf is alpha! He will fight with the Wolf Pack's Alpha now.");
             System.out.println("The wolf lost, now he will not be considered alpha anymore.");
-            newWolf.setAlpha(false);
+            newWolf.setWolfRole(WolfRole.BETA);
         }
         else {
             System.out.println("The wolf is not alpha, he will have no problem joining the Wolf Pack.");
