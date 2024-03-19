@@ -7,11 +7,9 @@ import assuresoft.com.sciencemuseum2.systems.digestive.OmnivorousDigestion;
 import assuresoft.com.sciencemuseum2.systems.reproductive.SexualReproduction;
 import assuresoft.com.sciencemuseum2.systems.respiratory.GillsRespiration;
 import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
-
 import java.util.List;
 
 public class Catfish extends Animal {
-
     public Catfish(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }

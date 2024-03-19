@@ -4,7 +4,6 @@ import assuresoft.com.sciencemuseum2.interfaces.DigestiveSystem;
 import assuresoft.com.sciencemuseum2.interfaces.ReproductiveSystem;
 import assuresoft.com.sciencemuseum2.interfaces.RespiratorySystem;
 import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
-
 import java.util.List;
 
 public class AnimalSystems {
