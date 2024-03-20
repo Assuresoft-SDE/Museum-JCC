@@ -10,11 +10,20 @@ import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
 
 public class Dolphin extends Animal {
+    /**
+     * @param animalSystems (AnimalSystems) The animal body systems associated with the dolphin.
+     * @param animalData    (AnimalData) The information associated with the dolphin.
+     */
     public Dolphin(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }
 
 
+    /**
+     * @param scientificName (String) The scientific name of the dolphin.
+     * @param commonName     (String) The common name of the dolphin.
+     * @param gender         (String) The gender of the dolphin.
+     */
     public Dolphin(String scientificName, String commonName, String gender) {
         AnimalData dolphinData = new AnimalData(scientificName, commonName, "Delphinidae", gender);
         List<Sensors> dolphinSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Touch, Sensors.Echolocation, Sensors.Taste);

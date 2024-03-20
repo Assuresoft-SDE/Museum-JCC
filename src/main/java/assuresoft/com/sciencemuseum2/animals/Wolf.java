@@ -14,12 +14,22 @@ public class Wolf extends Animal {
     private String coatColor;
     private boolean isAlpha;
     private WolfPack wolfPack;
-
+    /**
+     * @param animalSystems (AnimalSystems) The animal body systems associated with the wolf.
+     * @param animalData    (AnimalData) The information associated with the wolf.
+     */
     public Wolf(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }
 
 
+    /**
+     * @param scientificName (String) The scientific name of the wolf.
+     * @param commonName     (String) The common name of the wolf.
+     * @param gender         (String) The gender of the wolf.
+     * @param coatColor      (String) The fur color of the wolf.
+     * @param isAlpha        (Boolean) Specifies if the wolf is alpha or not.
+     */
     public Wolf(String scientificName, String commonName, String gender, String coatColor, boolean isAlpha) {
         AnimalData wolfData = new AnimalData(scientificName, commonName, "Canidae", gender);
         List<Sensors> wolfSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);

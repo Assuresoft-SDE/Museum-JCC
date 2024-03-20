@@ -10,11 +10,20 @@ import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
 
 public class Catfish extends Animal {
+    /**
+     * @param animalSystems (AnimalSystems) The animal body systems associated with the catfish.
+     * @param animalData    (AnimalData) The information associated with the catfish.
+     */
     public Catfish(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }
 
 
+    /**
+     * @param scientificName (String) The scientific name of the catfish.
+     * @param commonName     (String) The common name of the catfish.
+     * @param gender         (String) The gender of the catfish.
+     */
     public Catfish(String scientificName, String commonName, String gender) {
         AnimalData catfishData = new AnimalData(scientificName, commonName, "Siluridae", gender);
         List<Sensors> catfishSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);

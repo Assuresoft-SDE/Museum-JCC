@@ -10,11 +10,20 @@ import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
 
 public class Bat extends Animal {
+    /**
+     * @param animalSystems (AnimalSystems) The animal body systems associated with the bat.
+     * @param animalData    (AnimalData) The information associated with the bat.
+     */
     public Bat(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }
 
 
+    /**
+     * @param scientificName (String) The scientific name of the bat.
+     * @param commonName     (String) The common name of the bat.
+     * @param gender         (String) The gender of the bat.
+     */
     public Bat(String scientificName, String commonName, String gender) {
         AnimalData batData = new AnimalData(scientificName, commonName, "Microchiroptera", gender);
         List<Sensors> batSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Echolocation);
