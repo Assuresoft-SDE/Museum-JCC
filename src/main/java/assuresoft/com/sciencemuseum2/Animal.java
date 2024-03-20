@@ -9,8 +9,8 @@ public abstract class Animal {
 
 
     /**
-     * @param animalSystems (AnimalSystems) The systems associated with the animal.
-     * @param animalData (AnimalData) The data associated with the animal.
+     * @param animalSystems     (AnimalSystems) The systems associated with the animal.
+     * @param animalData        (AnimalData) The data associated with the animal.
      */
     public Animal(AnimalSystems animalSystems, AnimalData animalData) {
         this.animalSystems = animalSystems;
