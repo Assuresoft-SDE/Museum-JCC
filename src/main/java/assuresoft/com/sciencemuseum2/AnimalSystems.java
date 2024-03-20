@@ -12,13 +12,10 @@ public class AnimalSystems {
     private final List<Sensors> sensorsList;
     private final DigestiveSystem digestiveSystem;
     /**
-     * Constructs an instance of AnimalSystems.
-     *
-     * @param respiratorySystem The respiratory system of the animal.
-     * @param reproductiveSystem The reproductive system of the animal.
-     * @param sensorsList The list of sensors used by the animal.
-     * @param digestiveSystem The digestive system of the animal.
-     * @return None
+     * @param respiratorySystem (RespiratorySystem) The respiratory system of the animal.
+     * @param reproductiveSystem (ReproductiveSystem) The reproductive system of the animal.
+     * @param sensorsList ( List<Sensors>)The list of sensors used by the animal.
+     * @param digestiveSystem (DigestiveSystem) The digestive system of the animal.
      */
     public AnimalSystems(
         RespiratorySystem respiratorySystem,
