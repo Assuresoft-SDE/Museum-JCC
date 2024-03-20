@@ -37,6 +37,7 @@ public class WolfPack{
         else {
             Wolf wolfExplorer = wolfPackMembers.get(indexWolfExplorer);
             wolfExplorer.getAnimalInformation();
+            System.out.println("The explorer wolf  will search for a new area \n");
         }
     }
 }
