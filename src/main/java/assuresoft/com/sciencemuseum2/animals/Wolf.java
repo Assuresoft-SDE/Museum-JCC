@@ -56,6 +56,15 @@ public class Wolf extends Animal implements Comparable<Wolf> {
         this.role = wolfRole;
     }
 
+    /**
+     * "compareTo" will compare strings in alphabetical order
+     * The result is a negative integer if this string lexicographically precedes the argument string.
+     * The result is a positive integer if this string lexicographically follows the argument string.
+     * The result is zero if the strings are equal
+     *
+     * @param   anotherWolf  (Wolf Class)
+     * @return               (int)
+     */
     @Override
     public int compareTo(Wolf anotherWolf) {
         return this.role.compareTo(anotherWolf.getWolfRole());
