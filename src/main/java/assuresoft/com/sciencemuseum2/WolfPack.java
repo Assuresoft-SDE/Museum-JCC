@@ -29,9 +29,10 @@ public class WolfPack{
     }
 
     public void searchNewArea(){
+        int searchNotFoundIndex = -1;
         System.out.println("Looking for the wolf explorer \n");
         int indexWolfExplorer = FibonacciSearch.fibonacciSearch( wolfPackMembers, new Wolf("","","","",WolfRole.EXPLORER));
-        if( indexWolfExplorer == -1 ){
+        if( indexWolfExplorer == searchNotFoundIndex ){
             System.out.println("explorer wolf not found");
         }
         else {
