@@ -29,22 +29,36 @@ public class FibonacciSearch<T extends Comparable<T>>{
 
         while (currentFibonacci > 1) {
             int index = getValidLocation(eliminatedFront + penultimateFibonacci, listSize - 1);
-            System.out.println("start debug");
-            System.out.println("list.get(index).compareTo(searchItem) == " +  );
-                if (list.get(index).compareTo(searchItem) < 0) {
-                    currentFibonacci = previousFibonacci;
-                    previousFibonacci = penultimateFibonacci;
+            /**
+             * "compareTo" will compare string in alphabetical order
+             * In this case:
+             *  similar to "list.get(index) < searchItem", when the list item is less than the searchItem
+             *  compareTo will return a negative number
+             */
+            if (list.get(index).compareTo(searchItem) < 0) {
+                currentFibonacci = previousFibonacci;
+                previousFibonacci = penultimateFibonacci;
+                penultimateFibonacci = currentFibonacci - previousFibonacci;
+                eliminatedFront = index;
+            }
+            /**
+             * In this case:
+             *  similar to "list.get(index) > searchItem", when the list item is greater than the searchItem
+             *  compareTo will return a positive number
+             */
+            else if (list.get(index).compareTo(searchItem) > 0) {
+                    currentFibonacci = penultimateFibonacci;
+                    previousFibonacci = previousFibonacci - penultimateFibonacci;
                     penultimateFibonacci = currentFibonacci - previousFibonacci;
-                    eliminatedFront = index;
-                }
-                else if (list.get(index).compareTo(searchItem) > 0) {
-                        currentFibonacci = penultimateFibonacci;
-                        previousFibonacci = previousFibonacci - penultimateFibonacci;
-                        penultimateFibonacci = currentFibonacci - previousFibonacci;
-                    }
-                else {
-                    return index;
-                }
+            }
+            /**
+             * In this case:
+             *  if the list item is equal than the searchItem
+             *  compareTo will return zero
+             */
+            else {
+                return index;
+            }
         }
 
         if (previousFibonacci == PREVIOUS_FIBONACCI && list.get(listSize - 1) == searchItem) {
