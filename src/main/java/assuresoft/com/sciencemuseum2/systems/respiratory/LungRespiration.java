@@ -4,22 +4,22 @@ import assuresoft.com.sciencemuseum2.interfaces.RespiratorySystem;
 
 public class LungRespiration implements RespiratorySystem {
     @Override
-    public void getOxygen() {
-        displayMessage("Inhaling oxygen from the environment.");
+    public String getOxygen() {
+        return formatMessage("Inhaling oxygen from the environment.");
     }
 
     @Override
-    public void transportOxygen() {
-        displayMessage("Transporting oxygen through the bloodstream via lungs.");
+    public String transportOxygen() {
+        return formatMessage("Transporting oxygen through the bloodstream via lungs.");
     }
 
     @Override
-    public void gasExchange() {
-        displayMessage("Exchanging gases between alveoli and blood capillaries.");
+    public String gasExchange() {
+        return formatMessage("Exchanging gases between alveoli and blood capillaries.");
     }
 
     @Override
-    public void co2Elimination() {
-        displayMessage("Eliminating carbon dioxide by exhaling.");
+    public String co2Elimination() {
+        return formatMessage("Eliminating carbon dioxide by exhaling.");
     }
 }

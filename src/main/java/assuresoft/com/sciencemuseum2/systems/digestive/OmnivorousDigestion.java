@@ -4,27 +4,27 @@ import assuresoft.com.sciencemuseum2.interfaces.DigestiveSystem;
 
 public class OmnivorousDigestion implements DigestiveSystem {
     @Override
-    public void intake() {
-        displayMessage("Consuming a variety of plant and animal-based foods.");
+    public String intake() {
+        return formatMessage("Consuming a variety of plant and animal-based foods.");
     }
 
     @Override
-    public void mechanicalDigestion() {
-        displayMessage("Chewing and breaking down food using teeth.");
+    public String mechanicalDigestion() {
+        return formatMessage("Chewing and breaking down food using teeth.");
     }
 
     @Override
-    public void chemicalDigestion() {
-        displayMessage("Digesting food using a combination of stomach acids and enzymes.");
+    public String chemicalDigestion() {
+        return formatMessage("Digesting food using a combination of stomach acids and enzymes.");
     }
 
     @Override
-    public void nutrientAbsorption() {
-        displayMessage("Absorbing nutrients from digested food in the small intestine.");
+    public String nutrientAbsorption() {
+        return formatMessage("Absorbing nutrients from digested food in the small intestine.");
     }
 
     @Override
-    public void fecalMatterElimination() {
-        displayMessage("Eliminating undigested waste as feces.");
+    public String fecalMatterElimination() {
+        return formatMessage("Eliminating undigested waste as feces.");
     }
 }
