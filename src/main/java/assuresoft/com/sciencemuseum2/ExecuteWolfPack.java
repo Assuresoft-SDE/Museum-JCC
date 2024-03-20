@@ -13,13 +13,13 @@ public class ExecuteWolfPack {
                 FUR_COLOR, WolfRole.ALPHA);
 
         Wolf wolf1 = new Wolf(SCIENTIFIC_NAME,"Wolf3", "Male",
-                FUR_COLOR, WolfRole.OMEGA);
+                FUR_COLOR, WolfRole.EXPLORER);
 
         Wolf wolf2 = new Wolf(SCIENTIFIC_NAME,"Wolf4", "Male",
                 FUR_COLOR, WolfRole.GAMMA);
 
         Wolf wolf3 = new Wolf(SCIENTIFIC_NAME,"Wolf5", "Male",
-                FUR_COLOR, WolfRole.EXPLORER);
+                FUR_COLOR, WolfRole.HUNT_LEADER);
 
         WolfPack wolfpack = new WolfPack(maleWolf, femaleWolf);
         wolfpack.addWolfToPack(wolf1);
