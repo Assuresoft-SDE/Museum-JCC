@@ -6,11 +6,24 @@ public class FibonacciSearch {
     private static final int NOT_FOUND = -1;
     private static final int PENULTIMATE_FIBONACCI = 0;
     private static final int PREVIOUS_FIBONACCI = 1;
-
+    /**
+     * Returns a valid index location within the list based on the given index and the maximum index.
+     *
+     * @param indexToCheck (int) The index to check.
+     * @param maxIndex (int) The maximum index allowed.
+     * @return (int) The valid index location.
+     */
     private static int getValidLocation(int indexToCheck, int maxIndex) {
         return Math.min(indexToCheck, maxIndex);
     }
 
+    /**
+     * Searches for a specified item in a list using Fibonacci search algorithm.
+     *
+     * @param list (List<Integer>)The list to be searched.
+     * @param searchItem (int) The item to search for.
+     * @return (int) The index of the searchItem in the list if it is found, otherwise -1.
+     */
     public static int fibonacciSearch(List<Integer> list, int searchItem) {
         int listSize = list.size();
         int penultimateFibonacci = PENULTIMATE_FIBONACCI;
