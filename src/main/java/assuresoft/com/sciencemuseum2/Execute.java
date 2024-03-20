@@ -28,7 +28,7 @@ public class Execute {
         animalsBehavior.append(catfish.performLifeProcesses());
 
         Animal wolf = new Wolf("Canis lupus","Wolf", "Male",
-                "White", false);
+                "White", WolfRole.EXPLORER);
         animalsBehavior.append(wolf.getAnimalInformation());
         animalsBehavior.append(wolf.performLifeProcesses());
 

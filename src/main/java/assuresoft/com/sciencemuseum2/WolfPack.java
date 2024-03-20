@@ -23,7 +23,7 @@ public class WolfPack{
 
         if (newWolf.isAlpha()) {
             behaviour = behaviour + ALPHAS_FIGHT;
-            newWolf.setAlpha(false);
+            newWolf.setWolfRole(WolfRole.BETA);
         }
         else {
             behaviour = behaviour + NOT_ALPHAS_FIGHT;
@@ -33,5 +33,19 @@ public class WolfPack{
         wolfPackMembers.add(newWolf);
         newWolf.joinWolfPack(this);
         return behaviour;
+    }
+
+    public void searchNewArea(){
+        int searchNotFoundIndex = -1;
+        System.out.println("Looking for the wolf explorer \n");
+        int indexWolfExplorer = FibonacciSearch.fibonacciSearch( wolfPackMembers, new Wolf("","","","",WolfRole.EXPLORER));
+        if( indexWolfExplorer == searchNotFoundIndex ){
+            System.out.println("explorer wolf not found");
+        }
+        else {
+            Wolf wolfExplorer = wolfPackMembers.get(indexWolfExplorer);
+            wolfExplorer.getAnimalInformation();
+            System.out.println("The explorer wolf  will search for a new area \n");
+        }
     }
 }
