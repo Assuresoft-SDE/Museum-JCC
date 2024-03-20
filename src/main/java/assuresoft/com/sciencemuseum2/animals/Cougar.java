@@ -28,8 +28,8 @@ public class Cougar extends Animal {
 
 
     @Override
-    public void getAnimalInformation() {
-        super.getAnimalInformation();
-        System.out.println("Coat Color: " + coatColor);
+    public String getAnimalInformation() {
+        return super.getAnimalInformation() +
+                "Coat Color: " + coatColor;
     }
 }
