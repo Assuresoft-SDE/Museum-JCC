@@ -4,27 +4,27 @@ import assuresoft.com.sciencemuseum2.interfaces.DigestiveSystem;
 
 public class CarnivorousDigestion implements DigestiveSystem {
     @Override
-    public void intake() {
-        displayMessage("Consuming meat or animal products.");
+    public String intake() {
+        return formatMessage("Consuming meat or animal products.");
     }
 
     @Override
-    public void mechanicalDigestion() {
-        displayMessage("Chewing or breaking down meat using teeth.");
+    public String mechanicalDigestion() {
+        return formatMessage("Chewing or breaking down meat using teeth.");
     }
 
     @Override
-    public void chemicalDigestion() {
-        displayMessage("Digesting meat using stomach acids and enzymes.");
+    public String chemicalDigestion() {
+        return formatMessage("Digesting meat using stomach acids and enzymes.");
     }
 
     @Override
-    public void nutrientAbsorption() {
-        displayMessage("Absorbing nutrients from digested meat in the small intestine.");
+    public String nutrientAbsorption() {
+        return formatMessage("Absorbing nutrients from digested meat in the small intestine.");
     }
 
     @Override
-    public void fecalMatterElimination() {
-        displayMessage("Eliminating undigested waste as feces.");
+    public String fecalMatterElimination() {
+        return formatMessage("Eliminating undigested waste as feces.");
     }
 }

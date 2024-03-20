@@ -5,6 +5,7 @@ public class AnimalData {
     private String commonName;
     private String family;
     private String gender;
+    private static final String LINE_BREAK = "\n";
 
     public AnimalData(String scientificName, String commonName, String family, String gender) {
         this.scientificName = scientificName;
@@ -14,12 +15,12 @@ public class AnimalData {
     }
 
 
-    public void getAnimalData() {
-        System.out.println("Animal Information");
-        System.out.println("Scientific Name: " + getScientificName());
-        System.out.println("Common Name: " + getCommonName());
-        System.out.println("Family: " + getFamily());
-        System.out.println("Gender: " + getGender());
+    public String getAnimalData() {
+        return "Animal Information" + LINE_BREAK +
+                "Scientific Name: " + getScientificName() + LINE_BREAK +
+                "Common Name: " + getCommonName() + LINE_BREAK +
+                "Family: " + getFamily() + LINE_BREAK +
+                "Gender: " + getGender() + LINE_BREAK;
     }
 
     public String getScientificName() {

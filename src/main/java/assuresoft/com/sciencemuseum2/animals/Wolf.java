@@ -32,10 +32,10 @@ public class Wolf extends Animal {
 
 
     @Override
-    public void getAnimalInformation() {
-        super.getAnimalInformation();
-        System.out.println("Coat Color: " + coatColor);
-        System.out.println("Alpha: " + (isAlpha ? "Yes" : "No"));
+    public String getAnimalInformation() {
+        return super.getAnimalInformation() +
+                "Coat Color: " + coatColor +
+                "Alpha: " + (isAlpha ? "Yes" : "No");
     }
 
     public void joinWolfPack(WolfPack wolfPack) {
