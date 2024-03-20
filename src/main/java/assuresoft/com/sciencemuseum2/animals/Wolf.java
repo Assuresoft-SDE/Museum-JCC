@@ -34,10 +34,10 @@ public class Wolf extends Animal implements Comparable<Wolf> {
 
 
     @Override
-    public void getAnimalInformation() {
-        super.getAnimalInformation();
-        System.out.println("Coat Color: " + coatColor);
-        System.out.println("Role: " + role);
+    public String getAnimalInformation() {
+        return super.getAnimalInformation() +
+                "Coat Color: " + coatColor +
+                "Role: " + role;
     }
 
     public void joinWolfPack(WolfPack wolfPack) {

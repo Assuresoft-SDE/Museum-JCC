@@ -12,7 +12,7 @@ public enum Sensors implements SensorialSystem {
     Cell;
 
     @Override
-    public void recognize() {
-        displayMessage("Sensor: " + this.name());
+    public String recognize() {
+        return formatMessage("Sensor: " + this.name());
     }
 }
