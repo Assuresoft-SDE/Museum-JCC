@@ -72,4 +72,11 @@ public abstract class Animal {
                 reproduce() + LINE_BREAK +
                 checkEnvironment() + LINE_BREAK;
     }
+
+    public AnimalData getAnimalData() {
+        return this.animalData;
+    }
+    public AnimalSystems getAnimalSystems(){
+        return this.animalSystems;
+    }
 }

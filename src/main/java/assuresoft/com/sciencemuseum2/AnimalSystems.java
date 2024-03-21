@@ -3,6 +3,9 @@ package assuresoft.com.sciencemuseum2;
 import assuresoft.com.sciencemuseum2.interfaces.DigestiveSystem;
 import assuresoft.com.sciencemuseum2.interfaces.ReproductiveSystem;
 import assuresoft.com.sciencemuseum2.interfaces.RespiratorySystem;
+import assuresoft.com.sciencemuseum2.systems.digestive.CarnivorousDigestion;
+import assuresoft.com.sciencemuseum2.systems.reproductive.SexualReproduction;
+import assuresoft.com.sciencemuseum2.systems.respiratory.LungRespiration;
 import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
 
@@ -55,5 +58,21 @@ public class AnimalSystems {
 
     public String executeReproductionProcess() {
         return reproductiveSystem.reproduce();
+    }
+
+    public List<Sensors> getSensors() {
+        return this.sensorsList;
+    }
+
+    public RespiratorySystem getRespiration() {
+        return this.respiratorySystem;
+    }
+
+    public ReproductiveSystem getReproduction() {
+        return this.reproductiveSystem;
+    }
+
+    public DigestiveSystem getDigestion() {
+        return this.digestiveSystem;
     }
 }
