@@ -12,7 +12,12 @@ public class AnimalSystems {
     private final List<Sensors> sensorsList;
     private final DigestiveSystem digestiveSystem;
     private static final String LINE_BREAK = "\n";
-
+    /**
+     * @param respiratorySystem     (RespiratorySystem) The respiratory system of the animal.
+     * @param reproductiveSystem    (ReproductiveSystem) The reproductive system of the animal.
+     * @param sensorsList           (List<Sensors>)The list of sensors used by the animal.
+     * @param digestiveSystem       (DigestiveSystem) The digestive system of the animal.
+     */
     public AnimalSystems(
         RespiratorySystem respiratorySystem,
         ReproductiveSystem reproductiveSystem,

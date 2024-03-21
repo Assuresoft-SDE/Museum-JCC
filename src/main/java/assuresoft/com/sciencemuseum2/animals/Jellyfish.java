@@ -12,12 +12,22 @@ import java.util.List;
 public class Jellyfish extends Animal {
     private int numberOfTentacles;
     private int tentacleLengthCm;
-
+    /**
+     * @param animalSystems (AnimalSystems) The animal body systems associated with the jellyfish.
+     * @param animalData    (AnimalData) The information associated with the jellyfish.
+     */
     public Jellyfish(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }
 
 
+    /**
+     * @param scientificName        (String) The scientific name of the jellyfish.
+     * @param commonName            (String) The common name of the jellyfish.
+     * @param gender                (String) The gender of the jellyfish.
+     * @param numberOfTentacles     (int) The number of tentacles of the jellyfish.
+     * @param tentacleLengthCm      (int) The size in centimeters of the jellyfish's tentacle.
+     */
     public Jellyfish(String scientificName, String commonName, String gender, int numberOfTentacles, int tentacleLengthCm) {
         AnimalData jellyfishData = new AnimalData(scientificName, commonName, "Cnidaria", gender);
         List<Sensors> jellyfishSensors = List.of(Sensors.Cell);

@@ -6,7 +6,12 @@ public class AnimalData {
     private String family;
     private String gender;
     private static final String LINE_BREAK = "\n";
-
+    /**
+     * @param scientificName    (String) The scientific name of the animal.
+     * @param commonName        (String) The common name of the animal.
+     * @param family            (String) The family to which the animal belongs.
+     * @param gender            (String) The gender of the animal.
+     */
     public AnimalData(String scientificName, String commonName, String family, String gender) {
         this.scientificName = scientificName;
         this.commonName = commonName;
