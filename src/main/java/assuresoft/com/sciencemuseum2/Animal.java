@@ -4,6 +4,8 @@ public abstract class Animal {
     private AnimalSystems animalSystems;
     private AnimalData animalData;
     private static final String LINE_BREAK = "\n";
+    private static final String MOVING = " is moving...";
+    private static final String SLEEPING = " is sleeping...";
 
 
     public Animal() {
@@ -25,11 +27,11 @@ public abstract class Animal {
     }
 
     public String translation() {
-        return this.animalData.getCommonName() + " is moving...";
+        return this.animalData.getCommonName() + MOVING;
     }
 
     public String sleep() {
-        return this.animalData.getCommonName() + " is sleeping...";
+        return this.animalData.getCommonName() + SLEEPING;
     }
 
     public String eat() {

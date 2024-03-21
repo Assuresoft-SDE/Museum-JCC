@@ -13,6 +13,9 @@ public class WolfPack{
             """;
     private static final String NOT_ALPHAS_FIGHT = "The wolf is not alpha, he will have no problem joining the Wolf Pack.\n";
     private static final String WOLF_JOINED_PACK = "The wolf has joined the Wolf Pack.\n\n";
+    private static final String SEARCH_FOR_EXPLORER_WOLF = "The wolf has joined the Wolf Pack.\n\n";
+    private static final String NOT_FOUND_EXPLORER_WOLF = "explorer wolf not found";
+    private static final String WOLF_EXPLORING = "The explorer wolf  will search for a new area \n";
     public WolfPack(Wolf maleWolf, Wolf femaleWolf){
         wolfPackMembers = new ArrayList<>(List.of(maleWolf,femaleWolf));
     }
@@ -35,17 +38,22 @@ public class WolfPack{
         return behaviour;
     }
 
-    public void searchNewArea(){
+    public String searchNewArea(){
+        StringBuilder searchBehavior = new StringBuilder();
+
         int searchNotFoundIndex = -1;
-        System.out.println("Looking for the wolf explorer \n");
+        searchBehavior.append(SEARCH_FOR_EXPLORER_WOLF);
         int indexWolfExplorer = FibonacciSearch.fibonacciSearch( wolfPackMembers, new Wolf("","","","",WolfRole.EXPLORER));
+
         if( indexWolfExplorer == searchNotFoundIndex ){
-            System.out.println("explorer wolf not found");
+            searchBehavior.append(NOT_FOUND_EXPLORER_WOLF);
         }
         else {
             Wolf wolfExplorer = wolfPackMembers.get(indexWolfExplorer);
             wolfExplorer.getAnimalInformation();
-            System.out.println("The explorer wolf  will search for a new area \n");
+            searchBehavior.append(WOLF_EXPLORING);
         }
+
+        return searchBehavior.toString();
     }
 }

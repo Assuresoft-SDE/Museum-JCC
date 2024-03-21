@@ -13,6 +13,7 @@ public class AnimalSystems {
     private final DigestiveSystem digestiveSystem;
     private static final String LINE_BREAK = "\n";
 
+
     public AnimalSystems(
         RespiratorySystem respiratorySystem,
         ReproductiveSystem reproductiveSystem,
@@ -43,7 +44,7 @@ public class AnimalSystems {
 
     public String checkEnvironment(){
         StringBuilder checkEnvironmentBehavior = new StringBuilder();
-        sensorsList.forEach(sensor -> checkEnvironmentBehavior.append(sensor.recognize()).append("\n"));
+        sensorsList.forEach(sensor -> checkEnvironmentBehavior.append(sensor.recognize()).append(LINE_BREAK));
 
         return checkEnvironmentBehavior.toString();
     }

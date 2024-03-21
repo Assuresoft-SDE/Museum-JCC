@@ -11,6 +11,8 @@ import java.util.List;
 
 public class Condor extends Animal {
     private String coatColor;
+    private static final String CONDOR_FAMILY = "Cathartidae";
+
 
     public Condor(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
@@ -18,8 +20,8 @@ public class Condor extends Animal {
 
 
     public Condor(String scientificName, String commonName, String gender) {
-        AnimalData condorData = new AnimalData(scientificName, commonName, "Cathartidae", gender);
-        List<Sensors> condorSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Touch);
+        AnimalData condorData = new AnimalData(scientificName, commonName, CONDOR_FAMILY, gender);
+        List<Sensors> condorSensors = List.of(Sensors.VISION, Sensors.SMELL, Sensors.TOUCH);
         AnimalSystems condorSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), condorSensors, new CarnivorousDigestion());
 
         super.setAnimalData(condorData);

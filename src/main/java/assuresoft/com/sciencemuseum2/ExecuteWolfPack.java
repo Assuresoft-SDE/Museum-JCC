@@ -7,6 +7,8 @@ public class ExecuteWolfPack {
     private static final String FUR_COLOR = "White";
     private static final String MALE_GENDER = "Male";
     private static final String FEMALE_GENDER = "Female";
+
+
     public static void main(String[] args) {
         StringBuilder wolfPackBehavior = new StringBuilder();
 

@@ -10,14 +10,17 @@ import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
 
 public class Catfish extends Animal {
+    private static final String CATFISH_FAMILY = "Siluridae";
+
+
     public Catfish(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }
 
 
     public Catfish(String scientificName, String commonName, String gender) {
-        AnimalData catfishData = new AnimalData(scientificName, commonName, "Siluridae", gender);
-        List<Sensors> catfishSensors = List.of(Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
+        AnimalData catfishData = new AnimalData(scientificName, commonName, CATFISH_FAMILY, gender);
+        List<Sensors> catfishSensors = List.of(Sensors.VISION, Sensors.SMELL, Sensors.TOUCH, Sensors.TASTE);
         AnimalSystems catfishSystems = new AnimalSystems(new GillsRespiration(), new SexualReproduction(), catfishSensors, new OmnivorousDigestion());
 
         super.setAnimalData(catfishData);

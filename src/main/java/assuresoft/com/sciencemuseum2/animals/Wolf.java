@@ -10,12 +10,13 @@ import assuresoft.com.sciencemuseum2.systems.reproductive.SexualReproduction;
 import assuresoft.com.sciencemuseum2.systems.respiratory.LungRespiration;
 import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
-import java.util.Objects;
 
 public class Wolf extends Animal implements Comparable<Wolf> {
     private String coatColor;
     private WolfPack wolfPack;
     private WolfRole role;
+    private static final String WOLF_FAMILY = "Canidae";
+
 
     public Wolf(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
@@ -23,8 +24,8 @@ public class Wolf extends Animal implements Comparable<Wolf> {
 
 
     public Wolf(String scientificName, String commonName, String gender, String coatColor, WolfRole wolfRole) {
-        AnimalData wolfData = new AnimalData(scientificName, commonName, "Canidae", gender);
-        List<Sensors> wolfSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
+        AnimalData wolfData = new AnimalData(scientificName, commonName, WOLF_FAMILY, gender);
+        List<Sensors> wolfSensors = List.of(Sensors.HEARING, Sensors.VISION, Sensors.SMELL, Sensors.TOUCH, Sensors.TASTE);
         AnimalSystems wolfSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), wolfSensors, new CarnivorousDigestion());
         this.coatColor = coatColor;
         this.role = wolfRole;
