@@ -1,6 +1,5 @@
 package assuresoft.com.sciencemuseum2;
 
-import assuresoft.com.sciencemuseum2.animals.Wolf;
 import assuresoft.com.sciencemuseum2.interfaces.DigestiveSystem;
 import assuresoft.com.sciencemuseum2.interfaces.ReproductiveSystem;
 import assuresoft.com.sciencemuseum2.interfaces.RespiratorySystem;
@@ -14,14 +13,10 @@ import assuresoft.com.sciencemuseum2.systems.respiratory.IntegumentaryRespiratio
 import assuresoft.com.sciencemuseum2.systems.respiratory.LungRespiration;
 import assuresoft.com.sciencemuseum2.systems.respiratory.TrachealRespiration;
 import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
-import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.MockitoAnnotations;
-
 import java.util.List;
-
 import static org.mockito.Mockito.mock;
 
 public class AnimalSystemsTest {
