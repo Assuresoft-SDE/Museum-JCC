@@ -10,14 +10,17 @@ import assuresoft.com.sciencemuseum2.systems.sensorial.Sensors;
 import java.util.List;
 
 public class Dolphin extends Animal {
+    private static final String DOLPHIN_FAMILY = "Delphinidae";
+
+
     public Dolphin(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
     }
 
 
     public Dolphin(String scientificName, String commonName, String gender) {
-        AnimalData dolphinData = new AnimalData(scientificName, commonName, "Delphinidae", gender);
-        List<Sensors> dolphinSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Touch, Sensors.Echolocation, Sensors.Taste);
+        AnimalData dolphinData = new AnimalData(scientificName, commonName, DOLPHIN_FAMILY, gender);
+        List<Sensors> dolphinSensors = List.of(Sensors.HEARING, Sensors.VISION, Sensors.TOUCH, Sensors.ECHOLOCATION, Sensors.TASTE);
         AnimalSystems dolphinSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), dolphinSensors, new CarnivorousDigestion());
 
         super.setAnimalData(dolphinData);

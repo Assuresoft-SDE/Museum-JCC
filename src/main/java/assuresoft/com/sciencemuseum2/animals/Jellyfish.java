@@ -12,6 +12,8 @@ import java.util.List;
 public class Jellyfish extends Animal {
     private int numberOfTentacles;
     private int tentacleLengthCm;
+    private static final String JELLYFISH_FAMILY = "Cnidaria";
+
 
     public Jellyfish(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
@@ -19,8 +21,8 @@ public class Jellyfish extends Animal {
 
 
     public Jellyfish(String scientificName, String commonName, String gender, int numberOfTentacles, int tentacleLengthCm) {
-        AnimalData jellyfishData = new AnimalData(scientificName, commonName, "Cnidaria", gender);
-        List<Sensors> jellyfishSensors = List.of(Sensors.Cell);
+        AnimalData jellyfishData = new AnimalData(scientificName, commonName, JELLYFISH_FAMILY, gender);
+        List<Sensors> jellyfishSensors = List.of(Sensors.CELL);
         AnimalSystems jellyfishSystems = new AnimalSystems(new IntegumentaryRespiration(), new SexualReproduction(), jellyfishSensors, new CarnivorousDigestion());
         this.numberOfTentacles = numberOfTentacles;
         this.tentacleLengthCm = tentacleLengthCm;

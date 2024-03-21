@@ -3,16 +3,18 @@ package assuresoft.com.sciencemuseum2.systems.sensorial;
 import assuresoft.com.sciencemuseum2.interfaces.SensorialSystem;
 
 public enum Sensors implements SensorialSystem {
-    Vision,
-    Smell,
-    Taste,
-    Touch,
-    Hearing,
-    Echolocation,
-    Cell;
+    VISION,
+    SMELL,
+    TASTE,
+    TOUCH,
+    HEARING,
+    ECHOLOCATION,
+    CELL;
 
+
+    private static final String SENSOR_FIELD = "Sensor: ";
     @Override
     public String recognize() {
-        return formatMessage("Sensor: " + this.name());
+        return formatMessage(SENSOR_FIELD + this.name());
     }
 }

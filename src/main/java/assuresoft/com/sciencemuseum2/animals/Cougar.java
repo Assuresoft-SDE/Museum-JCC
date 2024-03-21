@@ -11,6 +11,8 @@ import java.util.List;
 
 public class Cougar extends Animal {
     private String coatColor;
+    private static final String COUGAR_FAMILY = "Felidae";
+
 
     public Cougar(AnimalSystems animalSystems, AnimalData animalData) {
         super(animalSystems, animalData);
@@ -18,8 +20,8 @@ public class Cougar extends Animal {
 
 
     public Cougar(String scientificName, String commonName, String gender, String coatColor) {
-        AnimalData cougarData = new AnimalData(scientificName, commonName, "Felidae", gender);
-        List<Sensors> cougarSensors = List.of(Sensors.Hearing, Sensors.Vision, Sensors.Smell, Sensors.Touch, Sensors.Taste);
+        AnimalData cougarData = new AnimalData(scientificName, commonName, COUGAR_FAMILY, gender);
+        List<Sensors> cougarSensors = List.of(Sensors.HEARING, Sensors.VISION, Sensors.SMELL, Sensors.TOUCH, Sensors.TASTE);
         AnimalSystems cougarSystems = new AnimalSystems(new LungRespiration(), new SexualReproduction(), cougarSensors, new CarnivorousDigestion());
         this.coatColor = coatColor;
         super.setAnimalData(cougarData);

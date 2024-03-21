@@ -1,16 +1,14 @@
 package assuresoft.com.sciencemuseum2;
 
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class FibonacciSearch<T extends Comparable<T>>{
     private static final int NOT_FOUND = -1;
     private static final int PENULTIMATE_FIBONACCI = 0;
     private static final int PREVIOUS_FIBONACCI = 1;
+    private static final int STRING_COMPARISON_BASE = 0;
+    private static final int MINIMUM_FIBONACCI_VALUE = 1;
 
-    private static int getValidLocation(int indexToCheck, int maxIndex) {
-        return Math.min(indexToCheck, maxIndex);
-    }
 
     public static <T extends Comparable<T>> int fibonacciSearch(List<T> list,T searchItem) {
         int listSize = list.size();
@@ -27,7 +25,7 @@ public class FibonacciSearch<T extends Comparable<T>>{
 
         int eliminatedFront = NOT_FOUND;
 
-        while (currentFibonacci > 1) {
+        while (currentFibonacci > MINIMUM_FIBONACCI_VALUE) {
             int index = getValidLocation(eliminatedFront + penultimateFibonacci, listSize - 1);
             /**
              * "compareTo" will compare string in alphabetical order
@@ -35,7 +33,7 @@ public class FibonacciSearch<T extends Comparable<T>>{
              *  similar to "list.get(index) < searchItem", when the list item is less than the searchItem
              *  compareTo will return a negative number
              */
-            if (list.get(index).compareTo(searchItem) < 0) {
+            if (list.get(index).compareTo(searchItem) < STRING_COMPARISON_BASE) {
                 currentFibonacci = previousFibonacci;
                 previousFibonacci = penultimateFibonacci;
                 penultimateFibonacci = currentFibonacci - previousFibonacci;
@@ -46,7 +44,7 @@ public class FibonacciSearch<T extends Comparable<T>>{
              *  similar to "list.get(index) > searchItem", when the list item is greater than the searchItem
              *  compareTo will return a positive number
              */
-            else if (list.get(index).compareTo(searchItem) > 0) {
+            else if (list.get(index).compareTo(searchItem) > STRING_COMPARISON_BASE) {
                     currentFibonacci = penultimateFibonacci;
                     previousFibonacci = previousFibonacci - penultimateFibonacci;
                     penultimateFibonacci = currentFibonacci - previousFibonacci;
@@ -66,5 +64,9 @@ public class FibonacciSearch<T extends Comparable<T>>{
         }
 
         return NOT_FOUND;
+    }
+
+    private static int getValidLocation(int indexToCheck, int maxIndex) {
+        return Math.min(indexToCheck, maxIndex);
     }
 }

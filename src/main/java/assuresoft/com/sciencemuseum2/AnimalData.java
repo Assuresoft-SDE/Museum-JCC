@@ -6,6 +6,12 @@ public class AnimalData {
     private String family;
     private String gender;
     private static final String LINE_BREAK = "\n";
+    public static final String ANIMAL_INFORMATION = "Animal Information";
+    public static final String SCIENTIFIC_NAME_FIELD = "Scientific Name: ";
+    public static final String COMMON_NAME_FIELD = "Common Name: ";
+    public static final String FAMILY_FIELD = "Family: ";
+    public static final String GENDER_FIELD = "Gender: ";
+
 
     public AnimalData(String scientificName, String commonName, String family, String gender) {
         this.scientificName = scientificName;
@@ -16,11 +22,11 @@ public class AnimalData {
 
 
     public String getAnimalData() {
-        return "Animal Information" + LINE_BREAK +
-                "Scientific Name: " + getScientificName() + LINE_BREAK +
-                "Common Name: " + getCommonName() + LINE_BREAK +
-                "Family: " + getFamily() + LINE_BREAK +
-                "Gender: " + getGender() + LINE_BREAK;
+        return ANIMAL_INFORMATION + LINE_BREAK +
+                SCIENTIFIC_NAME_FIELD + getScientificName() + LINE_BREAK +
+                COMMON_NAME_FIELD + getCommonName() + LINE_BREAK +
+                FAMILY_FIELD + getFamily() + LINE_BREAK +
+                GENDER_FIELD + getGender() + LINE_BREAK;
     }
 
     public String getScientificName() {
