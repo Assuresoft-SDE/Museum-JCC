@@ -11,6 +11,7 @@ public class AnimalSystems {
     private final ReproductiveSystem reproductiveSystem;
     private final List<Sensors> sensorsList;
     private final DigestiveSystem digestiveSystem;
+    private static final String LINE_BREAK = "\n";
     /**
      * @param respiratorySystem     (RespiratorySystem) The respiratory system of the animal.
      * @param reproductiveSystem    (ReproductiveSystem) The reproductive system of the animal.
@@ -30,26 +31,29 @@ public class AnimalSystems {
     }
 
 
-    public void executeEatingProcess() {
-        digestiveSystem.intake();
-        digestiveSystem.mechanicalDigestion();
-        digestiveSystem.chemicalDigestion();
-        digestiveSystem.nutrientAbsorption();
-        digestiveSystem.fecalMatterElimination();
+    public String executeEatingProcess() {
+        return digestiveSystem.intake() + LINE_BREAK +
+                digestiveSystem.mechanicalDigestion() + LINE_BREAK +
+                digestiveSystem.chemicalDigestion() + LINE_BREAK +
+                digestiveSystem.nutrientAbsorption() + LINE_BREAK +
+                digestiveSystem.fecalMatterElimination() + LINE_BREAK;
     }
 
-    public void executeBreathingProcess() {
-        respiratorySystem.getOxygen();
-        respiratorySystem.transportOxygen();
-        respiratorySystem.gasExchange();
-        respiratorySystem.co2Elimination();
+    public String executeBreathingProcess() {
+        return respiratorySystem.getOxygen() + LINE_BREAK +
+                respiratorySystem.transportOxygen() + LINE_BREAK +
+                respiratorySystem.gasExchange() + LINE_BREAK +
+                respiratorySystem.co2Elimination() + LINE_BREAK;
     }
 
-    public void checkEnvironment(){
-        sensorsList.forEach(Sensors::recognize);
+    public String checkEnvironment(){
+        StringBuilder checkEnvironmentBehavior = new StringBuilder();
+        sensorsList.forEach(sensor -> checkEnvironmentBehavior.append(sensor.recognize()).append("\n"));
+
+        return checkEnvironmentBehavior.toString();
     }
 
-    public void executeReproductionProcess() {
-        reproductiveSystem.reproduce();
+    public String executeReproductionProcess() {
+        return reproductiveSystem.reproduce();
     }
 }

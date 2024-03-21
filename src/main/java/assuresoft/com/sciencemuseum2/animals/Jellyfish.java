@@ -40,9 +40,9 @@ public class Jellyfish extends Animal {
 
 
     @Override
-    public void getAnimalInformation() {
-        super.getAnimalInformation();
-        System.out.println("Number of Tentacles: " + numberOfTentacles);
-        System.out.println("Tentacles Length in Centimeters: " + tentacleLengthCm);
+    public String getAnimalInformation() {
+        return super.getAnimalInformation() +
+                "Number of Tentacles: " + numberOfTentacles +
+                "Tentacles Length in Centimeters: " + tentacleLengthCm;
     }
 }

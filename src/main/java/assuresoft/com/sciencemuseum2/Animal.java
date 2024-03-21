@@ -3,6 +3,8 @@ package assuresoft.com.sciencemuseum2;
 public abstract class Animal {
     private AnimalSystems animalSystems;
     private AnimalData animalData;
+    private static final String LINE_BREAK = "\n";
+
 
     public Animal() {
     }
@@ -26,48 +28,48 @@ public abstract class Animal {
         this.animalData = animalData;
     }
 
-    public void translation() {
-        System.out.println(this.animalData.getCommonName() + " is moving...");
+    public String translation() {
+        return this.animalData.getCommonName() + " is moving...";
     }
 
-    public void sleep() {
-        System.out.println(this.animalData.getCommonName() + " is sleeping...");
+    public String sleep() {
+        return this.animalData.getCommonName() + " is sleeping...";
     }
 
-    public void eat() {
-        System.out.println("Starting to eat:");
-        this.animalSystems.executeEatingProcess();
-        System.out.println("Finished digestion.\n");
+    public String eat() {
+        return "Starting to eat:" + LINE_BREAK +
+                this.animalSystems.executeEatingProcess() +
+                "Finished digestion." + LINE_BREAK;
     }
 
-    public void breathe() {
-        System.out.println("Starting to breath:");
-        this.animalSystems.executeBreathingProcess();
-        System.out.println("Finished breathing.\n");
+    public String breathe() {
+        return "Starting to breath:" + LINE_BREAK +
+                this.animalSystems.executeBreathingProcess() +
+                "Finished breathing." + LINE_BREAK;
     }
 
-    public void reproduce() {
-        System.out.println("Starting to reproduce:");
-        this.animalSystems.executeReproductionProcess();
-        System.out.println("Finished reproducing.\n");
+    public String reproduce() {
+        return "Starting to reproduce:" + LINE_BREAK +
+                this.animalSystems.executeReproductionProcess() +
+                "Finished reproducing." + LINE_BREAK;
     }
 
-    public void checkEnvironment() {
-        System.out.println("Checking environment with the following sensors:");
-        animalSystems.checkEnvironment();
-        System.out.println("Finished checking environment.\n");
+    public String checkEnvironment() {
+        return "Checking environment with the following sensors:" + LINE_BREAK +
+                animalSystems.checkEnvironment() +
+                "Finished checking environment." + LINE_BREAK;
     }
 
-    public void getAnimalInformation() {
-        animalData.getAnimalData();
+    public String getAnimalInformation() {
+        return animalData.getAnimalData();
     }
 
-    public void performLifeProcesses() {
-        translation();
-        sleep();
-        eat();
-        breathe();
-        reproduce();
-        checkEnvironment();
+    public String performLifeProcesses() {
+        return translation() + LINE_BREAK +
+                sleep() + LINE_BREAK +
+                eat() + LINE_BREAK +
+                breathe() + LINE_BREAK +
+                reproduce() + LINE_BREAK +
+                checkEnvironment() + LINE_BREAK;
     }
 }

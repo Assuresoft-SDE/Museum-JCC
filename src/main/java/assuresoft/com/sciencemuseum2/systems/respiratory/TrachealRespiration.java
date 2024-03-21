@@ -4,22 +4,22 @@ import assuresoft.com.sciencemuseum2.interfaces.RespiratorySystem;
 
 public class TrachealRespiration implements RespiratorySystem {
     @Override
-    public void getOxygen() {
-        displayMessage("Absorbing oxygen directly through tracheal tubes.");
+    public String getOxygen() {
+        return formatMessage("Absorbing oxygen directly through tracheal tubes.");
     }
 
     @Override
-    public void transportOxygen() {
-        displayMessage("Transporting oxygen through tracheal system to cells.");
+    public String transportOxygen() {
+        return formatMessage("Transporting oxygen through tracheal system to cells.");
     }
 
     @Override
-    public void gasExchange() {
-        displayMessage("Exchanging gases between tracheoles and body cells.");
+    public String gasExchange() {
+        return formatMessage("Exchanging gases between tracheoles and body cells.");
     }
 
     @Override
-    public void co2Elimination() {
-        displayMessage("Releasing carbon dioxide through tracheal system.");
+    public String co2Elimination() {
+        return formatMessage("Releasing carbon dioxide through tracheal system.");
     }
 }

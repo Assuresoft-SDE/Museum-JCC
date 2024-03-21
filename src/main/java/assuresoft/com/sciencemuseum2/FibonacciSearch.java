@@ -2,7 +2,7 @@ package assuresoft.com.sciencemuseum2;
 
 import java.util.*;
 
-public class FibonacciSearch {
+public class FibonacciSearch<T extends Comparable<T>>{
     private static final int NOT_FOUND = -1;
     private static final int PENULTIMATE_FIBONACCI = 0;
     private static final int PREVIOUS_FIBONACCI = 1;
@@ -17,14 +17,14 @@ public class FibonacciSearch {
         return Math.min(indexToCheck, maxIndex);
     }
 
+
     /**
-     * Searches for a specified item in a list using Fibonacci search algorithm.
-     *
-     * @param list          (List<Integer>)The list to be searched.
+     * @param list          (List<T> list) The list to be searched. Must be sorted in ascending order.
      * @param searchItem    (int) The item to search for.
+     * @param <T>           The type of elements in the list, which must implement the Comparable interface.
      * @return              (int) The index of the searchItem in the list if it is found, otherwise -1.
      */
-    public static int fibonacciSearch(List<Integer> list, int searchItem) {
+    public static <T extends Comparable<T>> int fibonacciSearch(List<T> list,T searchItem) {
         int listSize = list.size();
         int penultimateFibonacci = PENULTIMATE_FIBONACCI;
         int previousFibonacci = PREVIOUS_FIBONACCI;
@@ -41,18 +41,33 @@ public class FibonacciSearch {
 
         while (currentFibonacci > 1) {
             int index = getValidLocation(eliminatedFront + penultimateFibonacci, listSize - 1);
-
-            if (list.get(index) < searchItem) {
+            /**
+             * "compareTo" will compare string in alphabetical order
+             * In this case:
+             *  similar to "list.get(index) < searchItem", when the list item is less than the searchItem
+             *  compareTo will return a negative number
+             */
+            if (list.get(index).compareTo(searchItem) < 0) {
                 currentFibonacci = previousFibonacci;
                 previousFibonacci = penultimateFibonacci;
                 penultimateFibonacci = currentFibonacci - previousFibonacci;
                 eliminatedFront = index;
             }
-            else if (list.get(index) > searchItem) {
-                currentFibonacci = penultimateFibonacci;
-                previousFibonacci = previousFibonacci - penultimateFibonacci;
-                penultimateFibonacci = currentFibonacci - previousFibonacci;
+            /**
+             * In this case:
+             *  similar to "list.get(index) > searchItem", when the list item is greater than the searchItem
+             *  compareTo will return a positive number
+             */
+            else if (list.get(index).compareTo(searchItem) > 0) {
+                    currentFibonacci = penultimateFibonacci;
+                    previousFibonacci = previousFibonacci - penultimateFibonacci;
+                    penultimateFibonacci = currentFibonacci - previousFibonacci;
             }
+            /**
+             * In this case:
+             *  if the list item is equal than the searchItem
+             *  compareTo will return zero
+             */
             else {
                 return index;
             }
